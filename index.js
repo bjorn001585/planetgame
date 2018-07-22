@@ -1,7 +1,3 @@
-// бот для Discord : Ilich
-// создан на JavaScript
-// создатель в ВК : https://vk.com/nikita.feed
-
 const botconfig = require("./botconfig.json");
 const tokenfile = require("./token.json");
 const Discord = require("discord.js");
