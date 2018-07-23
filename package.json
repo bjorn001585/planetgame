@@ -1,0 +1,15 @@
+{
+  "name": "ilych",
+  "version": "1.0.0",
+  "description": "just testing bot",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "NF",
+  "license": "ISC"
+}
