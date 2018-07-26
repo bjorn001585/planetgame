@@ -56,9 +56,9 @@ bot.on("message", async message => {
     if (cmd === `${prefix}pidor`) {
         var pid1 = Math.floor(Math.random() * 100) + 0
         let pidorEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName)
+        .setTitle(message.member.displayName + " на " + pid1 + "% пидор")
         .setColor("#0F0000")
-        .setDescription("на" + pid1 + "% пидор");
+        .setFooter("Ильич");
         return message.channel.send(pidorEmbed);
     }
     //command: creator
@@ -121,7 +121,7 @@ bot.on("message", async message => {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle("А вот и помощи подьешала: " + message.member.displayName)
         .setColor("#0F0000")
-        .setDescription("Основной префикс бота `!`\n\n`!avatar` - покажу, каким я в последний раз видел вашего друга (в зазработке)\n`!лох` - найду того, кто последний раз вас отпиздил\n`!iluxa` - позвоним Илюхе (Бета, есть ошибки)`\npidor` - пройди тест на Пидора\n`!sms` - отправлю смс выбранному чуваку\n`!off` - оповещаю о том, что вы отошли\n`!on` - оповещаю о том, что вы подошли\n`!creator` - подскажу, кто из этой толпы мой создатель\n`!fight` - потренеруюсь с тобой в силе (в разработке)\n`!say` - горланю анекдоты про лупу и пупу за вас\n`!meme` - кидаю мемчики (в разработке)\n`!choose` - сделаю за тебя выбор\n`!ask` - задай мне вопрос (~~это не пиар аск.фм~~) (в зарзаботке)\n`!site` - узнаешь где сидит этот упырь!")
+        .setDescription("Основной префикс бота `!`\n\n`!avatar` - покажу, каким я в последний раз видел вашего друга (в зазработке)\n`!лох` - найду того, кто последний раз вас отпиздил\n`!iluxa` - позвоним Илюхе (Бета, есть ошибки)\n`!pidor` - пройди тест на Пидора\n`!sms` - отправлю смс выбранному чуваку\n`!off` - оповещаю о том, что вы отошли\n`!on` - оповещаю о том, что вы подошли\n`!creator` - подскажу, кто из этой толпы мой создатель\n`!fight` - потренеруюсь с тобой в силе (в разработке)\n`!say` - горланю анекдоты про лупу и пупу за вас\n`!meme` - кидаю мемчики (в разработке)\n`!choose` - сделаю за тебя выбор\n`!ask` - задай мне вопрос (~~это не пиар аск.фм~~) (в зарзаботке)\n`!site` - узнаешь где сидит этот упырь!")
         .setFooter("Ильич");
         return message.channel.send(helpEmbed);
     }
