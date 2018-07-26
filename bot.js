@@ -57,7 +57,7 @@ bot.on("message", async message => {
         var p1 = `\`\`${bot.pings[0]}ms\`\``
         let pingEmbed = new Discord.RichEmbed()
         .setTitle("Основной Ping")
-        .setColor("#ffa500")
+        .setColor("#0F0000")
         .setDescription("Соединение с сервером - " + p1)
         .setFooter("Внимание: это не ваш пинг, а бота!")
         return message.channel.send(pingEmbed);
