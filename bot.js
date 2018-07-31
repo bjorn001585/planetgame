@@ -5,8 +5,8 @@ bot.commands = new Discord.Collection();
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`);  
-    bot.user.setActivity("на твоё еблище", {type: "WATCHING"});     //Смотрит   {},
-    //bot.user.setGame("Cломать тебе ебало.exe");                   //Играет в  {}.
+    //bot.user.setActivity("на твоё еблище", {type: "WATCHING"});     //Смотрит   {},
+    bot.user.setGame("Cломать тебе ебало.exe");                   //Играет в  {}.
 });
 
 bot.on("message", async message => {
@@ -31,8 +31,12 @@ bot.on("message", async message => {
     }
     //command: test [просто проверка!]
     if (cmd === `${prefix}test`) {
-        message.channel.send(message.member.displayName + ' эта команда не работает, попробуй `!help`');
         message.delete().catch(O_o=>{});
+        let testEmbed = new Discord.RichEmbed()
+        .setTitle(message.member.displayName + " | тест успешно пройден, напиши `!help` что-бы узнать больше команд!")
+        .setColor("#0F0000")
+        .setFooter("Ильич");
+        return message.channel.send(testEmbed);
     }
     //command: on
     if (cmd === `${prefix}on`) {
@@ -47,7 +51,7 @@ bot.on("message", async message => {
     if (cmd === `${prefix}off`) {
         message.delete().catch(O_o=>{});
         let offEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName + " ушел дрочить, скоро вернется")
+        .setTitle(message.member.displayName + " ушел пинать хуи, скоро вернется")
         .setColor("#0F0000")
         .setFooter("Ильич");
         return message.channel.send(offEmbed);
@@ -132,7 +136,7 @@ bot.on("message", async message => {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle("А вот и помощи подьешала: " + message.member.displayName)
         .setColor("#0F0000")
-        .setDescription("Основной префикс бота `!`\n\n`!avatar` - покажу, каким я в последний раз видел вашего друга (в зазработке)\n`!ping` - Узнать пинг бота\n`!лох` - найду того, кто последний раз вас отпиздил\n`!iluxa` - позвоним Илюхе (Бета, есть ошибки)\n`!pidor` - пройди тест на Пидора\n`!sms` - отправлю смс выбранному чуваку\n`!off` - оповещаю о том, что вы отошли\n`!on` - оповещаю о том, что вы подошли\n`!creator` - подскажу, кто из этой толпы мой создатель\n`!fight` - потренеруюсь с тобой в силе (в разработке)\n`!say` - горланю анекдоты про лупу и пупу за вас\n`!meme` - кидаю мемчики (в разработке)\n`!choose` - сделаю за тебя выбор\n`!ask` - задай мне вопрос (~~это не пиар аск.фм~~) (в зарзаботке)\n`!site` - узнаешь где сидит этот упырь!")
+        .setDescription("Основной префикс бота `!`\n\n`!avatar` - покажу, каким я в последний раз видел вашего друга (в зазработке)\n`!test` - Проверить работу способность\n`!ping` - Узнать пинг бота\n`!лох` - найду того, кто последний раз вас отпиздил\n`!iluxa` - позвоним Илюхе (Бета, есть ошибки)\n`!pidor` - пройди тест на Пидора\n`!sms` - отправлю смс выбранному чуваку\n`!off` - оповещаю о том, что вы отошли\n`!on` - оповещаю о том, что вы подошли\n`!creator` - подскажу, кто из этой толпы мой создатель\n`!fight` - потренеруюсь с тобой в силе (в разработке)\n`!say` - горланю анекдоты про лупу и пупу за вас\n`!meme` - кидаю мемчики (в разработке)\n`!choose` - сделаю за тебя выбор\n`!ask` - задай мне вопрос (~~это не пиар аск.фм~~) (в зарзаботке)\n`!site` - узнаешь где сидит этот упырь!")
         .setFooter("Ильич");
         return message.channel.send(helpEmbed);
     }
