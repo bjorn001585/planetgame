@@ -21,6 +21,16 @@ bot.on("message", async message => {
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot,message,args);
 
+    //command: avatar 
+    if (cmd === `${prefix}avatar`) {
+        message.delete().catch(O_o=>{});
+        let avatarEmbed = new Discord.RichEmbed()
+        .setTitle("Аватарка пользователя " + message.member.displayName)
+        .setDescription(message.author.avatarURL)
+        .setColor("#0F0000")
+        .setFooter("Ильич");
+        return message.channel.send(avatarEmbed);
+    }
     //command: say [text]
     if (cmd === `${prefix}say`) {
         if (!args[0])
