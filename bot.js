@@ -5,7 +5,7 @@ bot.commands = new Discord.Collection();
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`);  
-    bot.user.setActivity("на Triger_3 и говорит что он даун, КЕК", {type: "WATCHING"});     //Смотрит   {},
+    bot.user.setActivity("на Triger_3 и говорит что он даун", {type: "WATCHING"});     //Смотрит   {},
     //bot.user.setGame("Cломать тебе ебало.exe");                   //Играет в  {}.
 });
 
