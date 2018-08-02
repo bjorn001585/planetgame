@@ -6,7 +6,7 @@ bot.commands = new Discord.Collection();
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`);  
     //bot.user.setActivity("на Triger_3 и говорит что он даун", {type: "WATCHING"});     //Смотрит   {},
-    bot.user.setGame("| где то на какомто сервере есть такой человек Triger_3, который щитает что он крутой, но насамом деле он ЛООООХ, КЕЕК");                   //Играет в  {}.
+    bot.user.setGame("сломать тебе ебало.exe | !help");                   //Играет в  {}.
 });
 
 bot.on("message", async message => {
