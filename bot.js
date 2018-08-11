@@ -104,13 +104,13 @@ bot.on("message", async message => {
     }
     //command: ask
     if (cmd === `${prefix}ask`) {
-        if(!args[1]) return message.reply("Укажи свой вопрос!");
+        if(!args[2]) return message.reply("Укажи свой вопрос!");
         let replies = ["Да", "Нет", "Не знаю", "Скорее всего нет!", "Скорее всего да!", "Возможно нет!", "Возможно да!", "Ты ебобо?", "ммм :3, нет!", "ммм :3, да", "Возможно, незнаю", "Наверное да", "Наверное нет", "Я хз", "?", ":3"];
         let result = Math.floor((Math.random() * replies.length));
         let question = args.slice(1).join(" ");
         let askEmbed = new Discord.RichEmbed()
         .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + question)
-        .setDescription("Мой ответ прозвечал так: " + replies[result])
+        .setDescription("Мой ответ прозвучал так: " + replies[result])
         .setColor("0F0000")
         .setFooter("Ильич");
         return message.channel.send(askEmbed);
