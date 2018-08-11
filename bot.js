@@ -6,7 +6,7 @@ bot.commands = new Discord.Collection();
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`);  
     //bot.user.setActivity("на Triger_3 и говорит что он даун", {type: "WATCHING"});     //Смотрит   {},
-    bot.user.setGame("Crafter топ ники noob | #help");                   //Играет в  {}.
+    bot.user.setGame("#help | сломтаь тебе ебало.ехе");                   //Играет в  {}.
 });
 
 bot.on("message", async message => {
@@ -27,7 +27,7 @@ bot.on("message", async message => {
     //command: say [text]
     if (cmd === `${prefix}say`) {
         if (!args[0])
-            return message.channel.send("\`\`\`!say [text]\`\`\`")
+            return message.channel.send("\`\`\`#say [text]\`\`\`")
         let say = args.join(" ");
         message.channel.send(say)
         message.delete().catch(O_o=>{});
@@ -119,7 +119,7 @@ bot.on("message", async message => {
     //command: iluxa [@nick]
     if (cmd === `${prefix}iluxa`) {
         if (!args[0])
-            return message.channel.send("\`\`\`!iluxa [@nick]\`\`\`")
+            return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
         let iluxa = args.join(" ");
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
