@@ -102,6 +102,18 @@ bot.on("message", async message => {
         .setFooter("Ильич");
         return message.channel.send(лохEmbed);
     }
+    //command: ask
+    if (cmd === `${prefix}ask`) {
+        if(!args[2]) return message.reply("Укажи свой вопрос!");
+        let replies = ["Да", "Нет", "Не знаю", "Скорее всего нет!", "Скорее всего да!", "Возможно нет!", "Возможно да!", "Ты ебобо?", "ммм :3, нет!", "ммм :3, да", "Возможно, незнаю", "Наверное да", "Наверное нет", "Я хз", "?", ":3"];
+        let result = Math.floor((Math.random() * replies.length));
+        let question = args.slice(1).join(" ");
+        let askEmbed = new Discord.RichEmbed()
+        .setTitle(message.member.displayName + " товй вопрос прозвучал так: " + question)
+        .setDescription("Мой ответ прозвечал так: " + replies[result])
+        .setFooter("Ильич");
+        return message.channel.send(askEmbed);
+    }
     //command: iluxa [@nick]
     if (cmd === `${prefix}iluxa`) {
         if (!args[0])
