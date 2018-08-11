@@ -28,6 +28,7 @@ bot.on("message", async message => {
     if (cmd === `${prefix}say`) {
         if (!args[0])
             return message.channel.send("\`\`\`#say [text]\`\`\`")
+            message.react('❎');
         let say = args.join(" ");
         message.channel.send(say)
         message.delete().catch(O_o=>{});
@@ -93,6 +94,7 @@ bot.on("message", async message => {
     if (cmd === `${prefix}лох`) {
         if (!args[0])
             return message.channel.send("\`\`\`!лох [@nick]\`\`\`")
+        message.react('❎');
         let лох = args.join(" ");
         message.delete().catch(O_o=>{});
         let лохEmbed = new Discord.RichEmbed()
@@ -105,6 +107,7 @@ bot.on("message", async message => {
     //command: ask
     if (cmd === `${prefix}ask`) {
         if(!args[0]) return message.channel.send("Укажи свой вопрос!");
+        message.react('❎');
         let replies = ["Да", "Нет", "Не знаю", "Скорее всего нет!", "Скорее всего да!", "Возможно нет!", "Возможно да!", "Ты ебобо?", "ммм :3, нет!", "ммм :3, да", "Возможно, незнаю", "Наверное да", "Наверное нет", "Я хз", "?", ":3"];
         let result = Math.floor((Math.random() * replies.length));
         let ask = args.join(" ");
@@ -120,6 +123,7 @@ bot.on("message", async message => {
     if (cmd === `${prefix}iluxa`) {
         if (!args[0])
             return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
+        message.react('❎');
         let iluxa = args.join(" ");
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
@@ -137,6 +141,7 @@ bot.on("message", async message => {
                     message.delete
                     message.reply('Ошибка. Причина: **Не указан получатель сообщения**');
                     return
+                    message.react('❎');
                 }
                 const sendMessage = args.join(" ");
                 let msg = user.send('**Вам пришло сообщение от ' + message.author + '. Он сказал:**' + sendMessage.replace(user, '')).catch(()=>{message.reply('Ошибка. Причина: **Не указано сообщение**');
