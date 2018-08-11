@@ -113,6 +113,7 @@ bot.on("message", async message => {
         .setDescription("Мой ответ прозвучал так: " + replies[result])
         .setColor("0F0000")
         .setFooter("Ильич");
+        message.delete().catch(O_o=>{});
         return message.channel.send(askEmbed);
     }
     //command: iluxa [@nick]
