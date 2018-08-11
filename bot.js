@@ -30,7 +30,6 @@ bot.on("message", async message => {
             return message.channel.send("\`\`\`#say [text]\`\`\`")
         let say = args.join(" ");
         message.channel.send(say)
-        message.react('❎');
         message.delete().catch(O_o=>{});
     }
     //command: test [просто проверка!]
@@ -95,7 +94,6 @@ bot.on("message", async message => {
         if (!args[0])
             return message.channel.send("\`\`\`!лох [@nick]\`\`\`")
         let лох = args.join(" ");
-        message.react('❎');
         message.delete().catch(O_o=>{});
         let лохEmbed = new Discord.RichEmbed()
         .setTitle("Я провел работу по поиску лохов, " + message.member.displayName)
@@ -110,7 +108,6 @@ bot.on("message", async message => {
         let replies = ["Да", "Нет", "Не знаю", "Скорее всего нет!", "Скорее всего да!", "Возможно нет!", "Возможно да!", "Ты ебобо?", "ммм :3, нет!", "ммм :3, да", "Возможно, незнаю", "Наверное да", "Наверное нет", "Я хз", "?", ":3"];
         let result = Math.floor((Math.random() * replies.length));
         let ask = args.join(" ");
-        message.react('❎');
         message.delete().catch(O_o=>{});
         let askEmbed = new Discord.RichEmbed()
         .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + ask)
@@ -124,7 +121,6 @@ bot.on("message", async message => {
         if (!args[0])
             return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
         let iluxa = args.join(" ");
-        message.react('❎');
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
         .setTitle(message.member.displayName + " Отправил smsку " + `${iluxa}` + " со следующим содержанием")
@@ -140,7 +136,6 @@ bot.on("message", async message => {
                 if (!user) {
                     message.delete
                     message.reply('Ошибка. Причина: **Не указан получатель сообщения**');
-                    message.react('❎');
                     return
                 }
                 const sendMessage = args.join(" ");
