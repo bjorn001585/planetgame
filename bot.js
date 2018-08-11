@@ -104,16 +104,16 @@ bot.on("message", async message => {
     }
     //command: ask
     if (cmd === `${prefix}ask`) {
-        if(!args[0]) return message.reply("Укажи свой вопрос!");
+        if(!args[0]) return message.channel.send("Укажи свой вопрос!");
         let replies = ["Да", "Нет", "Не знаю", "Скорее всего нет!", "Скорее всего да!", "Возможно нет!", "Возможно да!", "Ты ебобо?", "ммм :3, нет!", "ммм :3, да", "Возможно, незнаю", "Наверное да", "Наверное нет", "Я хз", "?", ":3"];
         let result = Math.floor((Math.random() * replies.length));
         let ask = args.join(" ");
+        message.delete().catch(O_o=>{});
         let askEmbed = new Discord.RichEmbed()
         .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + ask)
         .setDescription("Мой ответ прозвучал так: " + replies[result])
         .setColor("0F0000")
         .setFooter("Ильич");
-        message.delete().catch(O_o=>{});
         return message.channel.send(askEmbed);
     }
     //command: iluxa [@nick]
