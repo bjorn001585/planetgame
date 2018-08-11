@@ -109,7 +109,7 @@ bot.on("message", async message => {
         let result = Math.floor((Math.random() * replies.length));
         let ask = args.join(" ");
         let askEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + (ask))
+        .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + ask)
         .setDescription("Мой ответ прозвучал так: " + replies[result])
         .setColor("0F0000")
         .setFooter("Ильич");
