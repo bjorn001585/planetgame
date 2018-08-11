@@ -109,8 +109,8 @@ bot.on("message", async message => {
         let result = Math.floor((Math.random() * replies.length));
         let ask = args.join(" ");
         let askEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName + " товой вопрос прозвучал так: " + message.channel.send(ask))
-        .setDescription("Мой ответ прозвучал так: " + replies[result])
+        .setField(message.member.displayName + " товой вопрос прозвучал так: " + message.channel.send(ask))
+        .setField("Мой ответ прозвучал так: " + replies[result])
         .setColor("0F0000")
         .setFooter("Ильич");
         return message.channel.send(askEmbed);
