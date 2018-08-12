@@ -120,7 +120,7 @@ bot.on("message", async message => {
     if (cmd === `${prefix}iluxa`) {
         if (!args[0])
             return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
-        var iluxa = message.member.displayName
+        var iluxa = args.join(" ");
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
         .setTitle(message.member.displayName + " Отправил smsку " + `${iluxa}` + " со следующим содержанием")
