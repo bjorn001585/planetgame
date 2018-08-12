@@ -153,7 +153,7 @@ bot.on("message", async message => {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle("А вот и помощь подьехала: " + message.member.displayName)
         .setColor("#0F0000")
-        .setImage("https://images-ext-2.discordapp.net/external/FIu-kF3PptgtaPgJBe2ukWuZRGOkvhZUSfA0O92vxh8/https/cdn.pixabay.com/photo/2016/06/15/15/02/info-1459077_960_720.png")
+        .setAuthor("https://images-ext-2.discordapp.net/external/FIu-kF3PptgtaPgJBe2ukWuZRGOkvhZUSfA0O92vxh8/https/cdn.pixabay.com/photo/2016/06/15/15/02/info-1459077_960_720.png")
         .setDescription("Основной префикс бота `#`\n\n`#avatar` - покажу, каким я в последний раз видел вашего друга (в зазработке)\n`#test` - Проверить работу способность\n`#ping` - Узнать пинг бота\n`#лох` - найду того, кто последний раз вас отпиздил\n`#iluxa` - позвоним Илюхе (Бета, есть ошибки)\n`#pidor` - пройди тест на Пидора\n`#sms` - отправлю смс выбранному чуваку\n`#off` - оповещаю о том, что вы отошли\n`#on` - оповещаю о том, что вы подошли\n`#creator` - подскажу, кто из этой толпы мой создатель\n`#fight` - потренеруюсь с тобой в силе (в разработке)\n`#say` - горланю анекдоты про лупу и пупу за вас\n`#meme` - кидаю мемчики (в разработке)\n`#choose` - сделаю за тебя выбор (в разработке)\n`#ask` - задай мне вопрос (~~это не пиар аск.фм~~)\n`#site` - узнаешь где сидит мой создатель (упырь)!\n\nТе команды где `(в зарработке)` не работают или не доработаны")
         .setFooter("Ильич");
         return message.channel.send(helpEmbed);
