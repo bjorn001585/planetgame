@@ -92,7 +92,7 @@ bot.on("message", async message => {
     //command: лох [@nick]
     if (cmd === `${prefix}лох`) {
         if (!args[0])
-            return message.channel.send("\`\`\`!лох [@nick]\`\`\`")
+            return message.channel.send("\`\`\`#лох [@nick]\`\`\`")
         let лох = args.join(" ");
         message.delete().catch(O_o=>{});
         let лохEmbed = new Discord.RichEmbed()
