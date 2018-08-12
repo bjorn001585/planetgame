@@ -123,7 +123,7 @@ bot.on("message", async message => {
         var iluxa = args.join(" ");
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName + " Отправил smsку " + `${iluxa}` + " со следующим содержанием")
+        .setTitle(message.member.displayName + " Отправил smsку " + iluxa + " со следующим содержанием")
         .setColor("#0F0000")
         .setDescription("Брей пизду и жопу, Илюха у мчится")
         .setFooter("Ильич");
