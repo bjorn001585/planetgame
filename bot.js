@@ -66,7 +66,7 @@ bot.on("message", async message => {
         .setTitle("Основной Ping")
         .setColor("#0F0000")
         .setDescription("Соединение с сервером - " + p1)
-        .setFooter("Внимание: это не ваш пинг, а бота!")
+        .setFooter("Ильич | Внимание: это не ваш пинг, а бота!")
         return message.channel.send(pingEmbed);
         message.delete().catch(O_o=>{});
     }
@@ -78,6 +78,7 @@ bot.on("message", async message => {
         .setColor("#0F0000")
         .setFooter("Ильич");
         return message.channel.send(pidorEmbed);
+        message.delete().catch(O_o=>{});
     }
     //command: creator
     if (cmd === `${prefix}creator`) {
@@ -91,8 +92,7 @@ bot.on("message", async message => {
     }
     //command: лох [@nick]
     if (cmd === `${prefix}лох`) {
-        if (!args[0])
-            return message.channel.send("\`\`\`#лох [@nick]\`\`\`")
+        if (!args[0]) return message.channel.send("\`\`\`#лох [@nick]\`\`\`")
         let лох = args.join(" ");
         message.delete().catch(O_o=>{});
         let лохEmbed = new Discord.RichEmbed()
@@ -118,8 +118,7 @@ bot.on("message", async message => {
     }
     //command: iluxa [@nick]
     if (cmd === `${prefix}iluxa`) {
-        if (!args[0])
-            return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
+        if (!args[0]) return message.channel.send("\`\`\`#iluxa [@nick]\`\`\`")
         var iluxa = args.join(" ");
         message.delete().catch(O_o=>{});
         let iluxaEmbed = new Discord.RichEmbed()
