@@ -61,6 +61,7 @@ bot.on("message", async message => {
     }
     //command: ping
     if (cmd === `${prefix}ping`) {
+        message.delete().catch(O_o=>{});
         var p1 = `\`\`${bot.pings[0]}ms\`\``
         let pingEmbed = new Discord.RichEmbed()
         .setTitle("Основной Ping")
@@ -68,7 +69,6 @@ bot.on("message", async message => {
         .setDescription("Соединение с сервером - " + p1)
         .setFooter("Ильич | Внимание: это не ваш пинг, а бота!")
         return message.channel.send(pingEmbed);
-        message.delete().catch(O_o=>{});
     }
     //command: pidor
     if (cmd === `${prefix}pidor`) {
