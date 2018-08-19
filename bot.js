@@ -40,7 +40,7 @@ bot.on("message", async message => {
         message.delete().catch(O_o=>{});
         let testEmbed = new Discord.RichEmbed()
         .setTitle("Тест бота")
-        .setDescription("Мой ответ прозвучал так: " + rand1[rand])
+        .setDescription(rand1[rand])
         .setColor("0F0000")
         .setFooter("Ильич");
         return message.channel.send(testEmbed);
