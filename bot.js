@@ -34,10 +34,14 @@ bot.on("message", async message => {
     }
     //command: test [просто проверка!]
     if (cmd === `${prefix}test`) {
+        let rand = ["https://media.discordapp.net/attachments/466199224254595072/480754949689442309/2x.gif", "https://media.discordapp.net/attachments/466199224254595072/480754182325010442/1x.gif"];
+        let rand1 = Math.floor((Math.random() * replies.length));
+        let ask = args.join(" ");
         message.delete().catch(O_o=>{});
         let testEmbed = new Discord.RichEmbed()
-        .setTitle(message.member.displayName + " | тест успешно пройден, напиши `!help` что-бы узнать больше команд!")
-        .setColor("#0F0000")
+        .setTitle("Тест бота")
+        .setDescription("Мой ответ прозвучал так: " + rand1[rand])
+        .setColor("0F0000")
         .setFooter("Ильич");
         return message.channel.send(testEmbed);
     }
