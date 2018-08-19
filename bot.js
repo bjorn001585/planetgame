@@ -35,7 +35,7 @@ bot.on("message", async message => {
     //command: test [просто проверка!]
     if (cmd === `${prefix}test`) {
         let rand = ["https://media.discordapp.net/attachments/466199224254595072/480754949689442309/2x.gif", "https://media.discordapp.net/attachments/466199224254595072/480754182325010442/1x.gif"];
-        let rand1 = Math.floor((Math.random() * replies.length));
+        let rand1 = Math.floor((Math.random() * rand.length));
         let ask = args.join(" ");
         message.delete().catch(O_o=>{});
         let testEmbed = new Discord.RichEmbed()
