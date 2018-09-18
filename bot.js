@@ -196,4 +196,20 @@ bot.on("message", async message => {
     }
 });
 
+if (message.content.startsWith(p + 'about')) {
+        message.delete()
+        let embed = new Discord.RichEmbed()
+        .setTitle("Статистика")
+        .setColor("ffd500")
+        .addField("Пинг", bot.ping, true)
+        .addField("UpTime", `${Math.round(bot.uptime / (1000 * 60 * 60 * 24))} дня(дней), ${Math.round(bot.uptime / (1000 * 60 * 60))} часа(ов), ${Math.round(bot.uptime / (1000 * 60)) % 60} минут, ${Math.round(bot.uptime / 1000) % 60} секунд`, true)
+        .addField("ОЗУ", process.env.WEB_MEMORY + 'мб / ' + process.env.MEMORY_AVAILABLE + 'мб', true)
+        .addField('Сервер', process.env.DYNO, true)
+        .addField('Порт', process.env.PORT, true)
+        .addField('Количество пользователей', bot.users.size, true)
+        .addField('Количество каналов', bot.channels.size, true)
+        .setThumbnail(bot.user.avatarURL);
+        message.channel.send({embed});
+    }
+
 bot.login(process.env.BOT_TOKEN);
