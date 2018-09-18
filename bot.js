@@ -194,9 +194,8 @@ bot.on("message", async message => {
         .setFooter("Ильич");
         return message.channel.send(siteEmbed);
     }
-});
-
- if (cmd === `${prefix}about`) {
+    
+     if (cmd === `${prefix}about`) {
         message.delete()
         let embed = new Discord.RichEmbed()
         .setTitle("Статистика")
@@ -211,5 +210,6 @@ bot.on("message", async message => {
         .setThumbnail(bot.user.avatarURL);
         message.channel.send({embed});
     }
+});
 
 bot.login(process.env.BOT_TOKEN);
