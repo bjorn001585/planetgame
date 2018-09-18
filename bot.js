@@ -196,7 +196,7 @@ bot.on("message", async message => {
     }
 });
 
-if (message.content.startsWith(p + 'about')) {
+ if (cmd === `${prefix}about`) {
         message.delete()
         let embed = new Discord.RichEmbed()
         .setTitle("Статистика")
